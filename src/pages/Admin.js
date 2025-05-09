@@ -20,7 +20,7 @@ const Admin = () => {
 
     // Fetch contact messages
     axios
-      .get("http://localhost:5000/api/contacts", {
+      .get("https://vidarbha-bioenergy-solutions.vercel.app/api/contacts", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
