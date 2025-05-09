@@ -37,7 +37,7 @@ const Admin = () => {
 
     // Fetch inquiries
     axios
-      .get("http://localhost:5000/api/inquiries", {
+      .get("https://vidarbha-bioenergy-solutions.vercel.app/api/inquiries", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
