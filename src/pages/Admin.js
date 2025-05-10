@@ -23,7 +23,7 @@ const Admin = () => {
 
     // Fetch contact messages
     axios
-      .get(`${baseURL}/contacts`, { headers })
+      .get(`${baseURL}/api/contacts`, { headers })
       .then((res) => {
         setContacts(res.data);
         setLoadingContacts(false);
@@ -38,7 +38,7 @@ const Admin = () => {
 
     // Fetch inquiries
     axios
-      .get(`${baseURL}/inquiries`, { headers })
+      .get(`${baseURL}/api/inquiries`, { headers })
       .then((res) => {
         setInquiries(res.data);
         setLoadingInquiries(false);

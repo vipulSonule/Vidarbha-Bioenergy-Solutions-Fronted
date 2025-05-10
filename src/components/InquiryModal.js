@@ -43,7 +43,7 @@ function InquiryModal({ onClose }) {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_URL}/api/inquiry`,
+        `${process.env.REACT_APP_SERVER_URL}/api/inquiries`,
         {
           method: "POST",
           headers: {
