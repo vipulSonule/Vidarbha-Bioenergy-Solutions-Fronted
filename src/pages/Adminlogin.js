@@ -13,10 +13,13 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://vidarbha-bioenergy-solutions.vercel.app/api/admin-login", {
-        username,
-        password,
-      });
+      const res = await axios.post(
+        `${process.env.REACT_APP_SERVER_URL}/admin-login`,
+        {
+          username,
+          password,
+        }
+      );
 
       localStorage.setItem("token", res.data.token); // save token to localStorage
       navigate("/admin"); // redirect to admin dashboard

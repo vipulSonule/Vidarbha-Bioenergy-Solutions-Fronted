@@ -18,11 +18,12 @@ const Admin = () => {
       return;
     }
 
+    const headers = { Authorization: `Bearer ${token}` };
+    const baseURL = process.env.REACT_APP_SERVER_URL;
+
     // Fetch contact messages
     axios
-      .get("https://vidarbha-bioenergy-solutions.vercel.app/api/contacts", {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      .get(`${baseURL}/contacts`, { headers })
       .then((res) => {
         setContacts(res.data);
         setLoadingContacts(false);
@@ -37,9 +38,7 @@ const Admin = () => {
 
     // Fetch inquiries
     axios
-      .get("https://vidarbha-bioenergy-solutions.vercel.app/api/inquiries", {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      .get(`${baseURL}/inquiries`, { headers })
       .then((res) => {
         setInquiries(res.data);
         setLoadingInquiries(false);
