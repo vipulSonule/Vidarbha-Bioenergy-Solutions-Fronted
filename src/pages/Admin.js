@@ -95,7 +95,7 @@ const Admin = () => {
               <div key={index} style={{ borderBottom: "1px solid #ccc", margin: "1rem 0" }}>
                 <p><strong>Name:</strong> {inquiry.name}</p>
                 <p><strong>Email:</strong> {inquiry.email}</p>
-                <p><strong>Contact No:</strong> {inquiry.contactNo}</p>
+                <p><strong>Contact No:</strong> {inquiry.mobile}</p>
                 <p><strong>Company:</strong> {inquiry.company}</p>
                 <p><strong>Capacity:</strong> {inquiry.capacity}</p>
                 <p><strong>Inquiry:</strong> {inquiry.message}</p>
