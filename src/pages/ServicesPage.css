@@ -1,0 +1,103 @@
+.services-container {
+  padding: 40px 20px;
+  background: #f8fdf7;
+  min-height: 100vh;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000; /* 🔁 black */
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 2px solid #d4edda;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 32px;
+  color: #000; /* 🔁 black icon */
+  margin-bottom: 12px;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000; /* 🔁 black title */
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #000; /* 🔁 black modal title */
+}
+
+.modal-description {
+  font-size: 16px;
+  color: #000; /* 🔁 black description */
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.modal-bullets {
+  list-style: disc;
+  padding-left: 20px;
+  color: #000; /* 🔁 black bullets */
+  font-size: 14px;
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}

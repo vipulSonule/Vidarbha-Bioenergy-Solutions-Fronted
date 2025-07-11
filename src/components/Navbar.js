@@ -33,6 +33,7 @@ function Navbar({ onNavClick }) {
         <li><Link to="/" onClick={handleLinkClick} className="nav-link">Home</Link></li>
         <li><Link to="/about" onClick={handleLinkClick} className="nav-link">About</Link></li>
         <li><Link to="/product" onClick={handleLinkClick} className="nav-link">Product</Link></li>
+        <li><Link to="/Services" onClick={handleLinkClick} className="nav-link">Services</Link></li>
         <li><Link to="/blogs" onClick={handleLinkClick} className="nav-link">Blogs</Link></li>
         <li><Link to="/contact" onClick={handleLinkClick} className="nav-link">Contact</Link></li>
       </ul>

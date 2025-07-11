@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
 import AdminLogin from "./pages/Adminlogin";
 import InquiryModal from "./components/InquiryModal";
+import Services from "./pages/ServicesPage";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/admin" element={<Admin />} />
+            <Route path="/services" element={<Services />} />
         </Routes>
         <Footer />
       </div>

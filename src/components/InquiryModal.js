@@ -4,7 +4,7 @@ import "./InquiryModal.css";
 function InquiryModal({ onClose }) {
   const [formData, setFormData] = useState({
     name: "",
-    mobile: "",     // still collecting as “mobile”
+    mobile: "",
     email: "",
     company: "",
     capacity: "",
@@ -43,7 +43,7 @@ function InquiryModal({ onClose }) {
 
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_SERVER_URL}/api/inquiries`,
+        `${process.env.REACT_APP_SERVER_URL}/api/inquiry`,
         {
           method: "POST",
           headers: {
@@ -59,9 +59,6 @@ function InquiryModal({ onClose }) {
           }),
         }
       );
-      
-      
-      
 
       if (!response.ok) throw new Error("Network response was not ok");
       const data = await response.json();
@@ -83,25 +80,25 @@ function InquiryModal({ onClose }) {
         {error && <div className="error-message">{error}</div>}
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} required/>
-            <input name="mobile" placeholder="Mobile" value={formData.mobile} onChange={handleChange} required/>
+            <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+            <input name="mobile" placeholder="Mobile" value={formData.mobile} onChange={handleChange} required />
           </div>
           <div className="form-group">
-            <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required/>
+            <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
           </div>
           <div className="form-group">
-            <input name="company" placeholder="Company Name" value={formData.company} onChange={handleChange} required/>
-            <input name="capacity" placeholder="Products Capacity" value={formData.capacity} onChange={handleChange} required/>
+            <input name="company" placeholder="Company Name" value={formData.company} onChange={handleChange} required />
+            <input name="capacity" placeholder="Products Capacity" value={formData.capacity} onChange={handleChange} required />
           </div>
           <div className="form-group">
-            <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required/>
+            <textarea name="message" placeholder="Message" value={formData.message} onChange={handleChange} required />
           </div>
           <div className="btn-group">
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Submitting..." : "SUBMIT"}
             </button>
             <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="whatsapp-btn">
-              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"/>
+              <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
               Let's Connect
             </a>
           </div>
